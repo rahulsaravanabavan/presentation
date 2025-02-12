@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentation Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#about">Research</a>
+                <a href="#solutions">Solutions</a>
+                <a href="desktop.html">Desktop Version</a>
+                <a href="mobile.html">Mobile Version</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="research" class="first-box">
+        <div class="first-box-text">
+            <h1><span>Black Board</span> <span class="hide-on-scroll">Grades Section</span></h1>   
+        </div>
+        <div class="blackboard-image">
+            <img src="./assets/presentgrades.png" alt="grades section present" >
+        </div>
+        <div class="first-box-text">
+            <div class="first-box-possibility">
+                <p>Redesign Proposal to Improve Student Experience in Viewing Grades and Feedback</p>
+        </div>
+        <div class="button-container">
+            <a href="https://www.figma.com/proto/GHk5QS9EAzTQwgb0wr01BL/UX_Prototyping?page-id=31%3A251&node-id=32-403&p=f&viewport=9%2C53%2C0.2&t=T61R5vVdI2T4ETaS-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=32%3A403" target="_blank" title="Desktop version "> 
+                <button>Desktop Version</button>
+            </a>     
+
+            <a href="https://www.figma.com/proto/GHk5QS9EAzTQwgb0wr01BL/UX_Prototyping?page-id=0%3A1&node-id=5-194&p=f&viewport=228%2C185%2C0.17&t=hdobS7DF7sM48cHJ-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=5%3A194" target="_blank" title="Mobile version "> 
+                <button>Mobile version </button>
+            </a> 
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-section">
+            <h2>About this project</h2>
+            <p>This project aims to enhance the student experience 
+                by redesigning the Grades and Feedback section of the academic portal. 
+                The proposal is based on research conducted during the Winter 2025
+                semester, where we explored the challenges students face in accessing,
+                interpreting, and utilizing their grades and feedback effectively.</p>
+            <h2>Why Do Students Need This Redesign?</h2>
+            <p> 
+                <ol>
+                    <strong><li>Lack of Clarity in Grade Presentation</li></strong>
+                        Many students find the current grade display confusing and difficult to interpret.
+                        Letter grades, percentage scores, and weighted averages are often not clearly explained, making it hard for students to understand their academic standing.
+                    <strong><li>Delayed or Hidden Feedback</li> </strong>
+                        Instructor feedback is often buried in different sections or difficult to locate. 
+                        Timely and accessible feedback is crucial for academic improvement, but students frequently struggle to find or interpret comments.
+                    <strong><li>Inconsistent Design and Navigation</li></strong>
+                        The current system may require multiple clicks and navigation through several menus to find grades and instructor feedback.
+                        A streamlined and intuitive design would significantly enhance the user experience.
+                    <strong><li>Lack of Visual Representation</li></strong>
+                        A simple list of grades does not provide insights into academic progress.
+                </ol>
+            </p>
+    </section>
+    <section id="solutions">
+        <div class="contact-form">
+            <h2><strong>How the Proposed Redesign Improves the Experience</strong></h2>
+            <p>The proposed design improves the student experience by 
+                offering a clear, structured, and intuitive interface 
+                that prioritizes accessibility and usability. Instead 
+                of navigating through multiple menus, students can view 
+                their grades, feedback, and progress insights all in one 
+                place through a dashboard-style layout. Grades are 
+                displayed with contextual explanations, including 
+                weightage and how they contribute to the final score, 
+                reducing confusion. Instructor feedback is integrated 
+                directly next to each grade, ensuring that students can 
+                access comments without searching through different 
+                sections. Additionally, visual elements like progress 
+                bars and trend graphs help students track their academic 
+                performance over time, making it easier to identify 
+                strengths and areas for improvement. The design also 
+                incorporates a notification system to alert students 
+                when new grades or feedback are available, ensuring 
+                they stay informed. By reducing cognitive load and 
+                simplifying navigation, this redesign makes the grading 
+                system more transparent, engaging, and user-friendly, 
+                ultimately supporting students in their learning journey.</p>
+            <div class="Solution">
+                <h2><strong>Proposed Solutions</strong></h2>
+                <p> 
+                    <ol>
+                        <strong><li>A notification system to alert students when feedback is available.</li></strong>
+
+                        <strong><li>Grades and feedback should be accessible within one or two clicks, reducing cognitive load.</li> </strong>
+                            
+                        <strong><li>Course-specific grade pages should provide a comprehensive breakdown of marks and evaluations.</li></strong>
+
+                        <strong><li>Graphical representations (e.g., line graphs, progress charts) to help students visualize their academic journey.</li></strong>
+
+                        <strong><li>Comparative performance indicators to understand strengths and areas for improvement.</li></strong>
+                    </ol>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Rahul Saravanabavan. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Reveal animations when scrolling
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if(sectionTop < windowHeight - 100) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

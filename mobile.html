@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="desktop.html">Desktop Version</a>
+                <a href="mobile.html">Mobile Version</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-section">
+        <div class="project-image2">
+            <img src="./assets/prototype2.gif" alt="Mobile prototype">
+        </div>
+        <div class="project-content">
+            <h2>Blackboard Grades Section Mobile Version</h2>
+            <p>In designing the mobile prototype for Blackboard's grades section, 
+                I deepened my understanding of mobile-first design principles and the unique 
+                challenges of creating a responsive, user-friendly interface for students. Through 
+                user feedback and my research, I identified key pain points like difficulty navigating 
+                grade breakdowns and accessing timely feedback. The struggle was in optimizing the interface
+                 to deliver essential information clearly on a smaller screen while ensuring intuitive 
+                 navigation. I focused on simplifying interactions, such as incorporating a course 
+                 carousel and prominently displaying feedback, without overwhelming the user. 
+                 Iterating the design for mobile required careful consideration of touch interactions, 
+                 visual hierarchy, and space constraints, ultimately leading to a streamlined prototype 
+                 that aims to enhance student engagement and support better learning outcomes. 
+                 This experience reinforced the importance of user testing, adaptability, and designing 
+                 for varied screen sizes to meet the needs of diverse users.
+            </p>
+            <a href="https://www.figma.com/proto/GHk5QS9EAzTQwgb0wr01BL/UX_Prototyping?page-id=0%3A1&node-id=5-194&p=f&viewport=228%2C185%2C0.17&t=hdobS7DF7sM48cHJ-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=5%3A194" target="_blank" title="Mobile Version">
+                <button>Learn More</button>
+            </a>
+        </div>
+    </section>
+
+    <section class="project-section3">
+        <div class="project-box">
+            <h2>Features</h2>
+            <p>These are some of the features that have been redesigned from the existing design.</p>
+        </div>
+        <!-- Feature 1 -->
+        <div class="feature-box">
+            <div class="feature-image">
+                <img src="./assets/featureM1.png" alt="Feature 1">
+            </div>
+            <div class="feature-text">
+                <p>Each course-specific grade page should provide a detailed breakdown of marks and evaluations, including assignment scores, weighted grades, and instructor comments. This transparency will help students understand their academic standing and areas requiring attention.</p>
+            </div>
+        </div>
+        <!-- Feature 2 -->
+        <div class="feature-box reverse">
+            <div class="feature-image">
+                <img src="./assets/featureM2.png" alt="Feature 2">
+            </div>
+            <div class="feature-text">
+                <p>Comparative performance indicators can be integrated to help students understand their strengths and areas for improvement. By showing relative performance metrics—such as class averages, percentile rankings, or subject-specific trends—students can better gauge their standing and take proactive steps to enhance their learning.</p>
+            </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="feature-box">
+            <div class="feature-image">
+                <img src="./assets/featureM3.png" alt="Feature 3">
+            </div>
+            <div class="feature-text">
+                <p>As students complete assignments, their cumulative grade updates dynamically based on the weights of completed work. This approach helps students understand how each assignment influences their overall performance, allowing them to prioritize efforts on higher-weighted tasks while maintaining steady progress throughout the course.</p>
+            </div>
+        </div>
+        <!-- Feature 4 -->
+        <div class="feature-box reverse">
+            <div class="feature-image">
+                <img src="./assets/featureM4.png" alt="Feature 4">
+            </div>
+            <div class="feature-text">
+                <p>Graphical representations, such as line graphs and progress charts, will help students visualize their academic journey over time. Seeing trends in their performance can motivate students to track their progress and make informed decisions about their learning strategies.</p>
+            </div>
+        </div>
+        <!-- Feature 5 -->
+        <div class="feature-box">
+            <div class="feature-image">
+                <img src="./assets/featureM5.png" alt="Feature 5">
+            </div>
+            <div class="feature-text">
+                <p>A notification system should be implemented to alert students as soon as feedback is available for their assignments or exams. Timely notifications via email or in-app alerts will ensure that students stay informed without constantly checking the portal, helping them engage with their evaluations more effectively.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Rahul Saravanabavan. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Reveal animations when scrolling
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if(sectionTop < windowHeight - 100) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
